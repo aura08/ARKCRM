@@ -132,14 +132,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\ArkcrmContext.cs" />
+    <Compile Include="DAL\UserInitilazer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201902161744259_apoFirst.cs" />
     <Compile Include="Migrations\201902161744259_apoFirst.Designer.cs">
       <DependentUpon>201902161744259_apoFirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902171233146_apo2.cs" />
+    <Compile Include="Migrations\201902171233146_apo2.Designer.cs">
+      <DependentUpon>201902171233146_apo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902171305219_apo3.cs" />
+    <Compile Include="Migrations\201902171305219_apo3.Designer.cs">
+      <DependentUpon>201902171305219_apo3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Page.cs" />
@@ -156,8 +167,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\guIaxs.jpg" />
+    <Content Include="images\tick.png" />
+    <Content Include="login\w3layouts-License.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -186,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -203,6 +231,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902161744259_apoFirst.resx">
       <DependentUpon>201902161744259_apoFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902171233146_apo2.resx">
+      <DependentUpon>201902171233146_apo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902171305219_apo3.resx">
+      <DependentUpon>201902171305219_apo3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
