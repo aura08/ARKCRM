@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARKCRM.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,19 @@ namespace ARKCRM.Areas.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Admin/Home
+        ArkcrmContext db = new ArkcrmContext();
         public ActionResult Index()
         {
+
+            return View();
+        }
+      
+        public ActionResult PartialIndex(string tableName) 
+        {
+             
+
+
+
             return View();
         }
     }

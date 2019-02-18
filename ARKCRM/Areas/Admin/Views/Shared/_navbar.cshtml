@@ -1,0 +1,43 @@
+﻿<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a id="user" class="navbar-brand" href="@Url.Action("Index", null, new { area = "Admin", controller = "Home" }, Request.Url.Scheme)">ARKCRM</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Create
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a id="userUp">User</a></li>
+                    <li><a href="#">Page</a></li>
+                   
+                </ul>
+            </li>
+            <li><a href="">User</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </div>
+</nav>
+<div>
+    <nav class="w3-sidebar w3-bar-block w3-light-grey" style="width:130px">
+        <button class="w3-bar-item w3-button" onclick="openCity(event, 'Analysis')">Analysis</button>
+        <button class="w3-bar-item w3-button" onclick="openCity(event, 'Graphs')">Graphs</button>
+        <button class="w3-bar-item w3-button" onclick="openCity(event, 'Settings')">Settings</button>
+    </nav>
+
+    
+
+</div>
+
+<script>  
+    $(document).ready(function () {
+        $("#userUp").click(function () {
+            
+            $('#Datetable').load("@Url.Action("PartialIndex", null, new { area = "Admin", controller = "Home" }, Request.Url.Scheme)?tableName=User");
+        });
+    });
+</script>
+ 
